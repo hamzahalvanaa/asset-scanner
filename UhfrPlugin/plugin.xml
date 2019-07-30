@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.handheld.uhfrdemo" version="0.1.0" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>UhfrPlugin</name>
+
+    <engines>
+      <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module name="UhfrPlugin" src="www/UhfrPlugin.js">
+        <clobbers target="UhfrPlugin" />
+    </js-module>
+
+    <platform name="android">
+
+        <framework src="extras.gradle" custom="true" type="gradleReference"/>
+        <framework src="build.gradle" custom="true" type="gradleReference"/>
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="UhfrPlugin">
+                <param name="android-package" value="com.handheld.uhfrdemo.UhfrPlugin" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/UhfrPlugin.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+
+        <!-- <source-file src="src/android/com/BRMicro/SerialPort.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/BRMicro/Tools.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" /> -->
+
+        <!-- <source-file src="src/android/com/handheld/uhfr/UhfrManager.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfr/BuildConfig.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" /> -->
+        <source-file src="src/android/com/handheld/uhfr/R.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+
+        <source-file src="src/android/com/handheld/uhfrdemo/EPCadapter.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/EpcDataModel.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/Fragment1_Inventory.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/Fragment2_ReadAndWrite.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/Fragment3_Lock.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/Fragment4_Kill.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/Fragment5_Settings.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/MainActivity.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/handheld/uhfrdemo/Util.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+
+        <!-- <source-file src="src/android/com/uhf/api/cls/JniModuleAPI.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" />
+        <source-file src="src/android/com/uhf/api/cls/Reader.java" target-dir="src/com/handheld/uhfrdemo/UhfrPlugin" /> -->
+
+        <source-file src="src/android/libs/armeabi/libdevapi.so" target-dir="app/src/libs" />
+        <source-file src="src/android/libs/armeabi/libModuleAPI_Android.so" target-dir="app/src/libs" />
+        <source-file src="src/android/libs/armeabi/libSerialPort.so" target-dir="app/src/libs" />
+        <source-file src="src/android/libs/uhf_r_com12_1.8.jar" target-dir="app/src/libs" />
+
+    </platform>
+</plugin>

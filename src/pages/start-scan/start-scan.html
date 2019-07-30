@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title text-center>
+      UHF-R App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+  <!-- <img width=60% height=60% [src]=image /> -->
+  <lottie-animation-view [options]="lottieConfig" [width]="300" [height]="300" (animCreated)="handleAnimation($event)">
+  </lottie-animation-view>
+
+  <ion-card text-center>
+    <ion-item-divider>Scan Manager</ion-item-divider>
+    <br>
+    <ion-row>
+      <ion-col>
+        <button (click)="setPower()" ion-button round>
+          Set Power
+        </button><br>
+      </ion-col>
+      <ion-col>
+        <button (click)="getPower()" ion-button round>
+          Get Power
+        </button><br>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button (click)="readCard()" ion-button round>
+          Read Card
+        </button><br>
+      </ion-col>
+      <ion-col>
+        <button (click)="searchCard()" ion-button round>
+          Search Card
+        </button><br>
+      </ion-col>
+    </ion-row><br>
+  </ion-card>
+</ion-content>

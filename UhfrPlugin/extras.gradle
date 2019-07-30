@@ -1,0 +1,3 @@
+dependencies {
+    provided files('src/libs/uhf_r_com12_1.8.jar')
+}

@@ -1,0 +1,17 @@
+{
+  "name": "com.handheld.uhfrdemo",
+  "version": "0.1.0",
+  "description": "Uhfr plugin for handheld device",
+  "cordova": {
+    "id": "com.handheld.uhfrdemo",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Hamzah Alvana",
+  "license": "ISC"
+}
