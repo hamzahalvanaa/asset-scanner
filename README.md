@@ -1,2 +1,1 @@
-# sewaOwner
 # asset-scanner
